@@ -2,13 +2,11 @@ package com.neu.his.common.dto.dms;
 
 import com.neu.his.mbg.model.DmsCaseHistory;
 import io.swagger.annotations.ApiModelProperty;
-import javafx.scene.chart.ValueAxis;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 
 @Setter
