@@ -1,7 +1,5 @@
 package com.neu.his.mbg.model;
 
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -28,9 +26,19 @@ public class SmsStaff implements Serializable {
 
     private Long roleId;
 
+    private String avatar;
+
     private Long registrationRankId;
 
     private static final long serialVersionUID = 1L;
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
 
     public Long getId() {
         return id;

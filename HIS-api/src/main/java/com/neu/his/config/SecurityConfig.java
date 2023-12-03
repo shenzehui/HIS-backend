@@ -1,6 +1,5 @@
 package com.neu.his.config;
 
-
 import com.neu.his.bo.StaffDetails;
 import com.neu.his.component.JwtAuthenticationTokenFilter;
 import com.neu.his.component.RestAuthenticationEntryPoint;
@@ -10,6 +9,8 @@ import com.neu.his.mbg.model.SmsStaff;
 import com.neu.his.sms.SmsRoleService;
 import com.neu.his.sms.SmsStaffService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -40,6 +41,7 @@ import java.util.List;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled=true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
     @Autowired
     private SmsStaffService smsStaffService;
 

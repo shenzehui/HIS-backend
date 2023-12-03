@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Setter
 @Getter
 @ToString
-public class SmsStaffLoginParam  implements Serializable {
+public class SmsStaffLoginParam implements Serializable {
     @ApiModelProperty(value = "用户名", required = true)
     @NotEmpty(message = "用户名不能为空")
     private String username;

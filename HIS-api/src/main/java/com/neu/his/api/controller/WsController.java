@@ -9,6 +9,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+import java.io.Console;
 import java.util.Date;
 
 @Controller
@@ -23,6 +24,7 @@ public class WsController {
         chatMsg.setFrom(staff.getUsername());
         chatMsg.setFromNickname(staff.getName());
         chatMsg.setDate(new Date());
+        System.out.println(chatMsg);
         simpMessagingTemplate.convertAndSendToUser(chatMsg.getTo(), "/queue/chat", chatMsg);
     }
 }

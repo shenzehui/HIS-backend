@@ -19,7 +19,7 @@ import java.util.Date;
 @Setter
 @Getter
 @ToString
-@Document(indexName = "drug", type = "allDrug",shards = 1,replicas = 0)
+@Document(indexName = "drug", shards = 1, replicas = 0)
 public class EsDrug implements Serializable {
     private static final long serialVersionUID = -1L;
     @Id
@@ -31,7 +31,7 @@ public class EsDrug implements Serializable {
     private String format;//药品规格
     private BigDecimal price;//药品单价
     private String unit;//包装单位
-    @Field(analyzer = "ik_max_word",type = FieldType.Text)
+    @Field(analyzer = "ik_max_word", type = FieldType.Text)
     private String manufacturer;//生产厂家
     private Long dosageId;//药品剂型
     private Long typeId;//药品类型

@@ -143,9 +143,11 @@ public class SmsStaffController {
             return CommonResult.validateFailed("用户名或密码错误");
         }
         //如果 token不等于 null
-        Map<String, String> tokenMap = new HashMap<>();
+        SmsStaff smsStaff = smsStaffService.selectByUserName(smsStaffLoginParam.getUsername());
+        Map<String, Object> tokenMap = new HashMap<>();
         tokenMap.put("token", token);
         tokenMap.put("tokenHead", tokenHead);
+        tokenMap.put("login_user", smsStaff);
         return CommonResult.success(tokenMap);
     }
 

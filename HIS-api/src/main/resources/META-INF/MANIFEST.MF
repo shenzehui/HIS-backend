@@ -87,5 +87,5 @@ Class-Path: libs/pagehelper-5.1.8.jar libs/lucene-spatial-7.4.0.jar li
  commons-beanutils-1.8.0.jar libs/compiler-0.9.3.jar libs/spring-oxm-5
  .1.5.RELEASE.jar libs/jul-to-slf4j-1.7.25.jar libs/spring-rabbit-2.1.
  4.RELEASE.jar
-Main-Class: com.neu.his.HisApiApplication
+Main-Class: com.neu.his.Application
 

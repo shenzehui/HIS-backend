@@ -14,6 +14,7 @@
         <result column="dept_id" jdbcType="BIGINT" property="deptId"/>
         <result column="role_id" jdbcType="BIGINT" property="roleId"/>
         <result column="registration_rank_id" jdbcType="BIGINT" property="registrationRankId"/>
+        <result column="avatar" property="avatar"/>
     </resultMap>
     <sql id="Example_Where_Clause">
         <where>
@@ -77,8 +78,7 @@
     </sql>
     <sql id="Base_Column_List">
         id
-        , username, password, status, create_time, gender, skd_flag, title, name, dept_id,
-    role_id, registration_rank_id
+        , username, password, status, create_time, gender, skd_flag, title, `name`, dept_id,avatar,role_id, registration_rank_id
     </sql>
     <select id="selectByExample" parameterType="com.neu.his.mbg.model.SmsStaffExample" resultMap="BaseResultMap">
         select
@@ -118,11 +118,11 @@
         insert into sms_staff (username, password, status,
         create_time, gender, skd_flag,
         title, name, dept_id,
-        role_id, registration_rank_id)
+        role_id, registration_rank_id,avatar)
         values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER},
         #{createTime,jdbcType=TIMESTAMP}, #{gender,jdbcType=INTEGER}, #{skdFlag,jdbcType=INTEGER},
         #{title,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{deptId,jdbcType=BIGINT},
-        #{roleId,jdbcType=BIGINT}, #{registrationRankId,jdbcType=BIGINT})
+        #{roleId,jdbcType=BIGINT}, #{registrationRankId,jdbcType=BIGINT},#{avatar,jdbcType=VARCHAR})
     </insert>
     <insert id="insertSelective" parameterType="com.neu.his.mbg.model.SmsStaff">
         <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
@@ -138,6 +138,9 @@
             </if>
             <if test="status != null">
                 status,
+            </if>
+            <if test="avatar != null">
+                avatar,
             </if>
             <if test="createTime != null">
                 create_time,
@@ -180,6 +183,9 @@
             <if test="gender != null">
                 #{gender,jdbcType=INTEGER},
             </if>
+            <if test="avatar != null">
+                #{avatar,jdbcType=VARCHAR},
+            </if>
             <if test="skdFlag != null">
                 #{skdFlag,jdbcType=INTEGER},
             </if>
@@ -221,6 +227,9 @@
             <if test="record.status != null">
                 status = #{record.status,jdbcType=INTEGER},
             </if>
+            <if test="record.avatar != null">
+                avatar = #{record.avatar,jdbcType=VARCHAR},
+            </if>
             <if test="record.createTime != null">
                 create_time = #{record.createTime,jdbcType=TIMESTAMP},
             </if>
@@ -258,6 +267,7 @@
         status = #{record.status,jdbcType=INTEGER},
         create_time = #{record.createTime,jdbcType=TIMESTAMP},
         gender = #{record.gender,jdbcType=INTEGER},
+        avatar = #{record.avatar,jdbcType=VARCHAR},
         skd_flag = #{record.skdFlag,jdbcType=INTEGER},
         title = #{record.title,jdbcType=VARCHAR},
         name = #{record.name,jdbcType=VARCHAR},
@@ -298,6 +308,9 @@
             <if test="deptId != null">
                 dept_id = #{deptId,jdbcType=BIGINT},
             </if>
+            <if test="avatar != null">
+                avatar = #{avatar,jdbcType=VARCHAR},
+            </if>
             <if test="roleId != null">
                 role_id = #{roleId,jdbcType=BIGINT},
             </if>
@@ -316,6 +329,7 @@
             gender               = #{gender,jdbcType=INTEGER},
             skd_flag             = #{skdFlag,jdbcType=INTEGER},
             title                = #{title,jdbcType=VARCHAR},
+            avatar               = #{avatar,jdbcType=VARCHAR},
             name                 = #{name,jdbcType=VARCHAR},
             dept_id              = #{deptId,jdbcType=BIGINT},
             role_id              = #{roleId,jdbcType=BIGINT},

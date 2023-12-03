@@ -145,7 +145,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 指定该Main Class为全局的唯一入口 -->
-                    <mainClass>com.neu.his.HisApiApplication</mainClass>
+                    <mainClass>com.neu.his.Application</mainClass>
                 </configuration>
                 <executions>
                     <execution>

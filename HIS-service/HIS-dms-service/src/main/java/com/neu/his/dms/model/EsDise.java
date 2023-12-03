@@ -12,7 +12,7 @@ import java.io.Serializable;
 @Setter
 @Getter
 @ToString
-@Document(indexName = "dise", type = "allDise",shards = 1,replicas = 0)
+@Document(indexName = "dise",shards = 1,replicas = 0)
 public class EsDise implements Serializable {
     private static final long serialVersionUID = -1L;
     @Id
