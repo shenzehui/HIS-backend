@@ -19,7 +19,7 @@ import java.util.List;
 @Controller
 @Api(tags = "BmsSettlementCatController", description = "结算类别管理")
 @RequestMapping("/settleCat")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class BmsSettlementCatController {
 
     @Autowired

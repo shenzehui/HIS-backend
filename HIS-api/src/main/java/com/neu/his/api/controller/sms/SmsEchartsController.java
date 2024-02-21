@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @Api(tags = "SmsEchartsController", description = "图表统计")
 @RequestMapping("/charts")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class SmsEchartsController {
     @Autowired
     private SmsEchartsService smsEchartsService;

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @Api(tags = "PmsDiagnosisPatientController", description = "诊断病人管理")
 @RequestMapping("/diagnosisPatient")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class PmsDiagnosisPatientController {
     @Autowired
     PmsPatientService pmsPatientService;

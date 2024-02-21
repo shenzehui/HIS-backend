@@ -20,7 +20,7 @@ import java.util.List;
 @Controller
 @Api(tags = "DmsDiseController", description = "诊断管理")
 @RequestMapping("/DmsDise")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class DmsDiseController {
     @Autowired
     DmsDiseService dmsDiseService;

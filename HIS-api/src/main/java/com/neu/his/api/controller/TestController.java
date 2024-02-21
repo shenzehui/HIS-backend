@@ -1,17 +1,17 @@
 package com.neu.his.api.controller;
 
-import com.neu.his.common.api.CommonResult;
-import com.neu.his.common.dto.sms.SmsDeptParam;
 import com.neu.his.sms.SmsRoleService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/test")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class TestController {
 
     @Autowired

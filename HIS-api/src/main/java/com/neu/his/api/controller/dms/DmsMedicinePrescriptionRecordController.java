@@ -18,7 +18,7 @@ import java.util.List;
 @Controller
 @Api(tags = "DmsMedicinePrescriptionRecordController", description = "成药处方管理")
 @RequestMapping("/DmsMedicinePrescriptionRecord")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class DmsMedicinePrescriptionRecordController {
 
     @Autowired

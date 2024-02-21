@@ -91,7 +91,11 @@ public class PmsPatientServiceImpl implements PmsPatientService {
 
         Date beforeAday = DateUtil.getDateBefore(date, 1);
 
-        dmsRegistrationExample.createCriteria().andBindStatusEqualTo(0).andDeptIdEqualTo(deptId).andStatusEqualTo(1).andAttendanceDateBetween(beforeAday, date);
+        dmsRegistrationExample.createCriteria()
+                .andBindStatusEqualTo(1)
+                .andDeptIdEqualTo(deptId)
+                .andStatusEqualTo(1)
+                .andAttendanceDateBetween(beforeAday, date);
         List<DmsRegistration> dmsRegistrationList = dmsRegistrationMapper.selectByExample(dmsRegistrationExample);
 
         System.err.println("deptWaitList.size: " + dmsRegistrationList.size());
@@ -129,7 +133,9 @@ public class PmsPatientServiceImpl implements PmsPatientService {
         //通过午别、时间、医生id在表sms_skd中查找出sms_skd的id
         SmsSkdExample smsSkdExample = new SmsSkdExample();
         // smsSkdExample.createCriteria().andNoonEqualTo(noon).andStaffIdEqualTo(staffId).andDateEqualTo(DateUtil.getDate(DateUtil.setMilliSecond(date,0)));
-        smsSkdExample.createCriteria().andStaffIdEqualTo(staffId).andDateEqualTo(DateUtil.getDate(DateUtil.setMilliSecond(date, 0)));
+        smsSkdExample.createCriteria()
+                .andStaffIdEqualTo(staffId)
+                .andDateEqualTo(DateUtil.getDate(DateUtil.setMilliSecond(date, 0)));
         /*
         时间判断问题
          */
@@ -152,7 +158,9 @@ public class PmsPatientServiceImpl implements PmsPatientService {
         DmsRegistrationExample dmsRegistrationExample1 = new DmsRegistrationExample();
         //使用DateUtil只截取日期部分
 
-        dmsRegistrationExample1.createCriteria().andBindStatusEqualTo(1).andAttendanceDateEqualTo(DateUtil.getDate(DateUtil.setMilliSecond(date, 0))).andSkdIdIn(idList);
+        dmsRegistrationExample1.createCriteria().andBindStatusEqualTo(1)
+                .andAttendanceDateEqualTo(DateUtil.getDate(DateUtil.setMilliSecond(date, 0)))
+                .andSkdIdIn(idList);
         ;
         /*
         时间判断问题

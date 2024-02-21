@@ -329,7 +329,7 @@ public class BmsFeeServiceImpl implements BmsFeeService {
         }
         else{
             //这些属性插入发票的时候要用
-            Long billId = 0l;//账单id
+            Long billId = 0L;//账单id
             BigDecimal totalAmount = new BigDecimal(0.0);//总金额  每一项叠加
             String itemList = "";//项目列表串 叠加
 

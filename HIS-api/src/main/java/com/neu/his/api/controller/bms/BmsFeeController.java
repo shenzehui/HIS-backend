@@ -26,7 +26,7 @@ import java.util.List;
 @Controller
 @Api(tags = "BmsFeeController", description = "收退费管理")
 @RequestMapping("/fee")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class BmsFeeController {
 
     @Autowired

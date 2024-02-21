@@ -21,7 +21,7 @@ import java.util.List;
 @Controller
 @Api(tags = "AppHistoryController", description = "APP 挂号历史信息管理")
 @RequestMapping("/appRegHistory")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class AppHistoryController {
 
     @Autowired

@@ -17,7 +17,7 @@ import java.util.List;
 @Controller
 @Api(tags = "DmsCaseModelController", description = "病历模板管理")
 @RequestMapping("/DmsCaseModel")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class DmsCaseModelController {
     @Autowired
     DmsCaseModelService dmsCaseModelService;

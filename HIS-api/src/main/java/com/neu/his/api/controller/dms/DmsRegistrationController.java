@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @Api(tags = "DmsRegistrationController", description = "挂号管理")
 @RequestMapping("/registration")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class DmsRegistrationController {
 
     @Autowired

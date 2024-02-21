@@ -18,7 +18,7 @@ import java.util.List;
 @Controller
 @Api(tags = "DmsRedisSaveController", description = "redis暂存管理")
 @RequestMapping("/redisSave")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class DmsRedisSaveController {
     private static Logger LOGGER = LoggerFactory.getLogger(DmsRedisSaveController.class);
 

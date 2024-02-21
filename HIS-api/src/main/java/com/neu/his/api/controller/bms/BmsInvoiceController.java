@@ -16,7 +16,7 @@ import java.util.List;
 @Controller
 @Api(tags = "BmsInvoiceController", description = "发票管理")
 @RequestMapping("/invoice")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class BmsInvoiceController {
     @Autowired
     BmsInvoiceService bmsInvoiceService;

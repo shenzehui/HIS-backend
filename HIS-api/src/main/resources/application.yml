@@ -2,12 +2,11 @@ spring:
   profiles:
     active: dev #默认为开发环境
   rabbitmq:
-    host: localhost
+    host: 192.168.88.131
     port: 5672
     virtual-host: /
-    username: guest
-    password: guest
-    publisher-confirms: true #如果对异步消息需要回调必须设置为true
+    username: szh
+    password: 123456
   redis:
     host: localhost # Redis服务器地址
     database: 0 # Redis数据库索引（默认为0）
@@ -20,6 +19,8 @@ spring:
         max-idle: 8 # 连接池中的最大空闲连接
         min-idle: 0 # 连接池中的最小空闲连接
     timeout: 3000ms # 连接超时时间（毫秒）
+  main:
+    allow-circular-references: true
 
 server:
   port: 9999
@@ -56,4 +57,5 @@ logging:
     com.neu.his: debug
 #  file: E:/log #配置日志文件路径
 #  path: demo_log.log #配置日志生成名称
+
 

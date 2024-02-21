@@ -17,7 +17,7 @@ import java.util.List;
 @Controller
 @Api(tags = "DmsNonDrugItemRecordController", description = "非药品收费项目管理")
 @RequestMapping("/nonDrugItemRecord")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class DmsNonDrugItemRecordController {
     @Autowired
     DmsNonDrugItemRecordService dmsNonDrugItemRecordService;

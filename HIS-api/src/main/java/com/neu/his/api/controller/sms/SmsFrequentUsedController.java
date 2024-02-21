@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @Api(tags = "SmsFrequentUsedController", description = "常用项管理")
 @RequestMapping("/frequentUsed")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class SmsFrequentUsedController {
 
     @Autowired

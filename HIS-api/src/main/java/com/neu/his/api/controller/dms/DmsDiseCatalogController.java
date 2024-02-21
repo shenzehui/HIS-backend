@@ -17,7 +17,7 @@ import java.util.List;
 @Controller
 @Api(tags = "DmsDiseCatalogController", description = "诊断目录管理")
 @RequestMapping("/DmsDiseCatalog")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class DmsDiseCatalogController {
     @Autowired
     DmsDiseCatalogService dmsDiseCatalogService;

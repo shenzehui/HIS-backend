@@ -1,5 +1,6 @@
 package com.neu.his.common.dto.dms;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,6 +26,7 @@ public class DmsRegistrationParam  implements Serializable {
     private Long deptId;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(timezone = "Asia/Shanghai")
     @ApiModelProperty(value = "就诊日期")
     private Date attendanceDate;
 

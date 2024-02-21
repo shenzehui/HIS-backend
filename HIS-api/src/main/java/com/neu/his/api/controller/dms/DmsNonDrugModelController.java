@@ -20,7 +20,7 @@ import java.util.List;
 @Controller
 @Api(tags = "DmsNonDrugModelController", description = "非药品模版管理")
 @RequestMapping("/NonDrugModel")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class DmsNonDrugModelController {
 
     @Autowired

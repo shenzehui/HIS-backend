@@ -22,7 +22,7 @@ import java.util.List;
 @Controller
 @Api(tags = "SmsSkdController", description = "排班管理")
 @RequestMapping("/skd")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class SmsSkdController {
 
     @Autowired

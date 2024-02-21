@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @Api(tags = "DmsCaseHistoryController", description = "病历管理")
 @RequestMapping("/caseHistory")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class DmsCaseHistoryController {
     @Autowired
     DmsCaseHistoryService dmsCaseHistoryService;

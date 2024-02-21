@@ -27,7 +27,7 @@ import java.util.List;
 @Controller
 @Api(tags = "AppRegistrationController", description = "APP 挂号管理")
 @RequestMapping("/appRegistration")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class AppRegistrationController {
 
     @Autowired

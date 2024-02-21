@@ -27,7 +27,7 @@ import java.util.Map;
 @Controller
 @Api(tags = "SmsStaffController", description = "用户管理")
 @RequestMapping("/staff")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class SmsStaffController {
 
     @Autowired

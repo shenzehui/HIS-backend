@@ -20,7 +20,7 @@ import java.util.List;
 @Controller
 @Api(tags = "SmsRegistrationRankController", description = "挂号级别管理")
 @RequestMapping("/registerRank")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class SmsRegistrationRankController {
 
     @Autowired

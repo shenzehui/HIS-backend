@@ -7,12 +7,13 @@ import lombok.ToString;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+
 @Setter
 @Getter
 @ToString
-public class DmsNonDrugItemRecordParam  implements Serializable {
-   @ApiModelProperty(value = "目的")
-   String aim;
+public class DmsNonDrugItemRecordParam implements Serializable {
+    @ApiModelProperty(value = "目的")
+    private String aim;
     @ApiModelProperty(value = "要求")
     String demand;
     @ApiModelProperty(value = "临床印象")
@@ -20,12 +21,12 @@ public class DmsNonDrugItemRecordParam  implements Serializable {
     @ApiModelProperty(value = "临床诊断")
     String clinicalDiagnosis;
     @ApiModelProperty(value = "非药品Id")
-    Long  noDrugId;
+    Long noDrugId;
     @ApiModelProperty(value = "检查部位")
-    String  checkParts;
+    String checkParts;
     @ApiModelProperty(value = "执行科室id")
-    Long  excuteDeptId;
-   @ApiModelProperty(value = "项目金额")
+    Long excuteDeptId;
+    @ApiModelProperty(value = "项目金额")
     BigDecimal amount;
 
 }

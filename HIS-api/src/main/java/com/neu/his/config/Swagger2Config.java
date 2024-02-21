@@ -24,24 +24,12 @@ import java.util.List;
 @EnableSwagger2
 public class Swagger2Config {
     @Bean
-    public Docket createRestApi(){
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo())
-                .select()
-                .apis(RequestHandlerSelectors.basePackage("com.neu.his.api"))
-                .paths(PathSelectors.any())
-                .build()
-                .securitySchemes(securitySchemes())
-                .securityContexts(securityContexts());
+    public Docket createRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()).select().apis(RequestHandlerSelectors.basePackage("com.neu.his.api")).paths(PathSelectors.any()).build().securitySchemes(securitySchemes()).securityContexts(securityContexts());
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder()
-                .title("HIS")
-                .description("基于restful的HIS接口")
-                .contact("neu")
-                .version("1.0")
-                .build();
+        return new ApiInfoBuilder().title("HIS").description("基于restful的HIS接口").contact("neu").version("1.0").build();
     }
 
     private List<ApiKey> securitySchemes() {
@@ -56,15 +44,11 @@ public class Swagger2Config {
         //设置需要登录认证的路径
         List<SecurityContext> result = new ArrayList<>();
         result.add(getContextByPath("/brand/.*"));
-
         return result;
     }
 
-    private SecurityContext getContextByPath(String pathRegex){
-        return SecurityContext.builder()
-                .securityReferences(defaultAuth())
-                .forPaths(PathSelectors.regex(pathRegex))
-                .build();
+    private SecurityContext getContextByPath(String pathRegex) {
+        return SecurityContext.builder().securityReferences(defaultAuth()).forPaths(PathSelectors.regex(pathRegex)).build();
     }
 
     private List<SecurityReference> defaultAuth() {

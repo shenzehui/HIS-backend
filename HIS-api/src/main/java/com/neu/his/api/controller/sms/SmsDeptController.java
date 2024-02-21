@@ -19,7 +19,7 @@ import java.util.List;
 @Controller
 @Api(tags = "SmsDeptController", description = "科室管理")
 @RequestMapping("/dept")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class SmsDeptController {
 
     @Autowired

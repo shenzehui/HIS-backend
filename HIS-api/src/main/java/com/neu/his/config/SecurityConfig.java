@@ -9,9 +9,6 @@ import com.neu.his.mbg.model.SmsStaff;
 import com.neu.his.sms.SmsRoleService;
 import com.neu.his.sms.SmsStaffService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -39,7 +36,7 @@ import java.util.List;
  */
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled=true)
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -55,44 +52,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf()// 由于使用的是JWT，我们这里不需要csrf
-                .disable()
-                .sessionManagement()// 基于token，所以不需要session
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .authorizeRequests()
-                .antMatchers(HttpMethod.GET, // 允许对于网站静态资源的无授权访问
-                        "/",
-                        "/*.html",
-                        "/favicon.ico",
-                        "/**/*.html",
-                        "/**/*.css",
-                        "/**/*.js",
-                        "/swagger-resources/**",
-                        "/v2/api-docs/**"
-                )
-                .permitAll()
-                .antMatchers("/staff/login", "/staff/register")// 对登录注册要允许匿名访问
-                .permitAll()
-                .antMatchers(HttpMethod.OPTIONS)//跨域请求会先进行一次options请求
-                .permitAll()
-                .antMatchers("/**")//测试时全部运行访问
-                .permitAll()
-                .anyRequest()// 除上面外的所有请求全部需要鉴权认证
+                .disable().sessionManagement()// 基于token，所以不需要session
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authorizeRequests().antMatchers(HttpMethod.GET, // 允许对于网站静态资源的无授权访问
+                        "/", "/*.html", "/favicon.ico", "/**/*.html", "/**/*.css", "/**/*.js", "/swagger-resources/**", "/v2/api-docs/**").permitAll().antMatchers("/staff/login", "/staff/register")// 对登录注册要允许匿名访问
+                .permitAll().antMatchers(HttpMethod.OPTIONS)//跨域请求会先进行一次options请求
+                .permitAll().antMatchers("/**")//测试时全部运行访问
+                .permitAll().anyRequest()// 除上面外的所有请求全部需要鉴权认证
                 .authenticated();
         // 禁用缓存
         httpSecurity.headers().frameOptions().disable().cacheControl();
         // 添加JWT filter
         httpSecurity.addFilterBefore(jwtAuthenticationTokenFilter(), UsernamePasswordAuthenticationFilter.class);
         //添加自定义未授权和未登录结果返回
-        httpSecurity.exceptionHandling()
-                .accessDeniedHandler(restfulAccessDeniedHandler)
-                .authenticationEntryPoint(restAuthenticationEntryPoint);
+        httpSecurity.exceptionHandling().accessDeniedHandler(restfulAccessDeniedHandler).authenticationEntryPoint(restAuthenticationEntryPoint);
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService())
-                .passwordEncoder(passwordEncoder());
+        auth.userDetailsService(userDetailsService()).passwordEncoder(passwordEncoder());
     }
 
     @Bean
@@ -107,14 +84,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             SmsStaff staff = smsStaffService.selectByUserName(username);//保证了User存在且状态不为0
             if (staff != null) {
                 List<SmsPermission> permissionList = smsRoleService.getPermissionList(staff.getId());
-                return new StaffDetails(staff,permissionList);
+                return new StaffDetails(staff, permissionList);
             }
             throw new UsernameNotFoundException("用户名或密码错误");
         };
     }
 
     @Bean
-    public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter(){
+    public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter() {
         return new JwtAuthenticationTokenFilter();
     }
 
@@ -125,13 +102,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("*");
+        config.addAllowedOriginPattern("*");
         config.setAllowCredentials(true);
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         source.registerCorsConfiguration("/**", config);
-        FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
-        bean.setOrder(0);
         return new CorsFilter(source);
     }
 

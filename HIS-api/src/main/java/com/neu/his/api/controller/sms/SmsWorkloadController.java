@@ -16,7 +16,7 @@ import java.util.List;
 @Controller
 @Api(tags = "SmsWorkloadController", description = "工作量统计")
 @RequestMapping("/workload")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class SmsWorkloadController {
 
     @Autowired

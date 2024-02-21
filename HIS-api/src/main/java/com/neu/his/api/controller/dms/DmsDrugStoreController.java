@@ -16,7 +16,7 @@ import java.util.Date;
 @Controller
 @Api(tags = "DmsDrugStoreController", description = "药房工作台")
 @RequestMapping("/drugStore")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class DmsDrugStoreController {
 
     @Autowired

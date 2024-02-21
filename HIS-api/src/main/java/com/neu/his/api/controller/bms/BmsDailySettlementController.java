@@ -17,7 +17,7 @@ import java.util.List;
 @Controller
 @Api(tags = "BmsDailySettlementController", description = "日结管理")
 @RequestMapping("/dailySettlement")
-@CrossOrigin(allowCredentials = "true")
+@CrossOrigin
 public class BmsDailySettlementController {
     @Autowired
     BmsDailySettlementService bmsDailySettlementService;
