@@ -47,7 +47,7 @@ public class DmsMechanicItemRecordResult  implements Serializable {
         String clinicalImpression;
         @ApiModelProperty(value = "临床诊断")
         String clinicalDiagnosis;
-        //20190621添加属性
+        //20230621添加属性
         @ApiModelProperty(value = "登记医生姓名")
         String logStaffName;
         @ApiModelProperty(value = "开立时间")

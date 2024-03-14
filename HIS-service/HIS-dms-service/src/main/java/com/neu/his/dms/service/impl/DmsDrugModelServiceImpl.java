@@ -156,9 +156,9 @@ public class DmsDrugModelServiceImpl implements DmsDrugModelService {
     /**
      * 描述：根据modelId更新model信息
      *       删了重新创建
-     * <p>author:赵煜
-     * <p>author:赵煜  排除空指针异常
-     * <p>author:赵煜  排除根据type和name查询异常
+     * <p>author:szh
+     * <p>author:szh  排除空指针异常
+     * <p>author:szh  排除根据type和name查询异常
      */
     @Override
     public List<DmsDrugModelResult> selectModel(Integer isAdmin, DmsDrugModelParam queryParam, Integer pageSize, Integer pageNum) {

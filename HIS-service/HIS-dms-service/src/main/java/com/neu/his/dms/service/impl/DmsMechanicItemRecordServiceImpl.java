@@ -37,8 +37,8 @@ public class DmsMechanicItemRecordServiceImpl implements DmsMechanicItemRecordSe
     /**
      * 描述:1.根据科室id和status为2未登记（已缴费） 3已登记 查询dms_non_drug_item_record
      * 2.封装信息
-     * <p>author: ma
-     * <p>author: 赵煜  修改type判断空指针异常 封装登记医生姓名 登记时间
+     * <p>author: szh
+     * <p>author: szh  修改type判断空指针异常 封装登记医生姓名 登记时间
      */
     @Override
     public List<DmsMechanicItemRecordResult> listByDeptAndName(Long deptId, String search) {

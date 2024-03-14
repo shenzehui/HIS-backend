@@ -54,7 +54,7 @@ public class BmsFeeServiceImpl implements BmsFeeService {
     //2.4 如果病历号为和挂号日期都不为空，则直接查询
 
     /**
-     *   20190624 赵煜 排除大量空指针异常
+     *   20230624 szh 排除大量空指针异常
      * @param medicalRecordNo
      * @param queryDate
      * @return

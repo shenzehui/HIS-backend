@@ -23,7 +23,7 @@ public class DmsNonDrugParam  implements Serializable {
     @ApiModelProperty(value = "价格")
     private BigDecimal price;
     @ApiModelProperty(value = "所属费用科目ID")
-    private Long expClassId;
+    private Long wexpClassId;
     @ApiModelProperty(value = "执行科室ID")
     private Long  deptId;
     @ApiModelProperty(value = "拼音助记码")

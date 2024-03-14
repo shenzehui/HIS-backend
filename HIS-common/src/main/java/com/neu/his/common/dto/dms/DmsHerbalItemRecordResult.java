@@ -34,7 +34,7 @@ public class DmsHerbalItemRecordResult  implements Serializable {
 
     private String drugName;
 
-    //20190704
+    //20230704
     private Long currentNum;
 
 }

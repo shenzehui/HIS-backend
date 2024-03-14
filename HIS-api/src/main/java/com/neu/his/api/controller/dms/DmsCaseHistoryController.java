@@ -45,7 +45,7 @@ public class DmsCaseHistoryController {
 
     /**
      * 描述：根据挂号id查询已结束就诊的历史病历（病历首页显示各种串）
-     * <p>author:赵煜
+     * <p>author:szh
      */
     @ApiOperation(value = "根据挂号id查询已结束就诊的历史病历（病历首页显示各种串）")
     @RequestMapping(value = "/selectEndCaseHistoryByReg/{registrationId}", method = RequestMethod.GET)

@@ -43,7 +43,7 @@ public interface DmsCaseModelService {
 
     /**
      * 描述:根据staffId获取所有病历模板
-     * <p>author: ma
+     * <p>author: szh
      */
     DmsCaseModelListResult getAllStaffModel(Long staffId);
 }

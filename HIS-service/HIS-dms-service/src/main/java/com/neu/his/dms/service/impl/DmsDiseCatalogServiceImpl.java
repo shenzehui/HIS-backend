@@ -44,7 +44,7 @@ public class DmsDiseCatalogServiceImpl implements DmsDiseCatalogService {
     /**
      * 描述：根据ids删除诊断目录
      * <p>author:王思阳
-     * <p>author:赵煜 删除目录并删除目录中地诊断
+     * <p>author:szh 删除目录并删除目录中地诊断
      */
     @Override
     public int delete(List<Long> ids) {
@@ -104,7 +104,7 @@ public class DmsDiseCatalogServiceImpl implements DmsDiseCatalogService {
     /**
      * 描述：查询所有诊断目录
      * <p>author:王思阳
-     * <p>author:赵煜 列出目录也需要倒序
+     * <p>author:szh 列出目录也需要倒序
      */
     @Override
     public List<DmsDiseCatalogResult> selectAll() {

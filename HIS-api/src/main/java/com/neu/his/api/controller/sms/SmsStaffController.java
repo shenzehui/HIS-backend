@@ -63,7 +63,7 @@ public class SmsStaffController {
 
     /**
      * 描述:新增一个用户
-     * <p>author:赵煜
+     * <p>author:szh
      */
     @ApiOperation("新增用户（调用注册接口）")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
@@ -75,7 +75,7 @@ public class SmsStaffController {
 
     /**
      * 描述:根据ids删除用户
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("根据ids删除用户")
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
@@ -90,7 +90,7 @@ public class SmsStaffController {
 
     /**
      * 描述:更新一个用户的全部信息
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("更新用户信息")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
@@ -105,7 +105,7 @@ public class SmsStaffController {
 
     /**
      * 描述:模糊查询用户、且分页
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("模糊查询用户、且分页")
     @RequestMapping(value = "/select", method = RequestMethod.POST)
@@ -119,7 +119,7 @@ public class SmsStaffController {
 
     /**
      * 描述:查询所有用户
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("查询所有用户")
     @RequestMapping(value = "/selectAll", method = RequestMethod.GET)
@@ -132,7 +132,7 @@ public class SmsStaffController {
 
     /**
      * 描述:登录
-     * <p>author: 赵煜
+     * <p>author: szh
      */
     @ApiOperation(value = "登录（返回token）")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -153,7 +153,7 @@ public class SmsStaffController {
 
     /**
      * 描述：新增时候列出的科室下员工信息
-     * <p>author: 赵煜
+     * <p>author: szh
      */
     @ApiOperation(value = "根据用户和密码查找用户")
     @RequestMapping(value = "/getStaffByPwd", method = RequestMethod.POST)

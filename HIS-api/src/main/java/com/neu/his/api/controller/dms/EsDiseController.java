@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * 搜索疾病管理Controller
- * Created by wang on 2019/6/19.
+ * Created by wang on 2023/6/19.
  */
 @Controller
 @Api(tags = "EsDiseController", description = "搜索诊断")

@@ -14,7 +14,7 @@ import java.util.Date;
 
 /**
  * 搜索中的商品信息
- * Created by wang on 2019/6/19.
+ * Created by wang on 2023/6/19.
  */
 @Setter
 @Getter

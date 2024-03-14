@@ -1,5 +1,6 @@
 package com.neu.his.pms.service;
 
+import com.neu.his.common.api.CommonResult;
 import com.neu.his.common.dto.dms.DmsCaseHistoryResult;
 import com.neu.his.common.dto.pms.PmsDiagnosisPatientListResult;
 import com.neu.his.common.dto.pms.PmsPatientResult;
@@ -37,4 +38,10 @@ public interface PmsPatientService {
      * 描述：病人app登录
      */
     PmsPatientResult patientLogin(String identificationNo, String medicalRecordNo);
+
+    /**
+     * 描述：病人app注册
+     */
+    CommonResult patientRegister(String identificationNo);
+
 }

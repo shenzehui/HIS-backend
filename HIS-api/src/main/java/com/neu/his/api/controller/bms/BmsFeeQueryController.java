@@ -22,7 +22,7 @@ public class BmsFeeQueryController {
 
     /**
      * 描述:根据挂号id查询患者费用
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("根据挂号Id查询患者费用")
     @RequestMapping(value = "/listByRegistration", method = RequestMethod.POST)

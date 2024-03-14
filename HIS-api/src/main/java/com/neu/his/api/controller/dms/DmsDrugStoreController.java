@@ -24,7 +24,7 @@ public class DmsDrugStoreController {
 
     /**
      * 描述:刷新发药患者
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("刷新发药患者")
     @RequestMapping(value = "/listPatient", method = RequestMethod.POST)
@@ -38,7 +38,7 @@ public class DmsDrugStoreController {
 
     /**
      * 描述:发药
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("发药")
     @RequestMapping(value = "/releaseDrug", method = RequestMethod.POST)
@@ -54,7 +54,7 @@ public class DmsDrugStoreController {
 
     /**
      * 描述:退药
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("退药")
     @RequestMapping(value = "/refundDrug", method = RequestMethod.POST)

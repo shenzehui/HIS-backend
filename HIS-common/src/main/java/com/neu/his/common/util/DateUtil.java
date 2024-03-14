@@ -69,7 +69,7 @@ public class DateUtil {
 
     /**
      * 从Date类型的时间中提取时间部分
-     * <p>author:赵煜
+     * <p>author:szh
      */
     public static Date getTime(Date date) {
         Calendar calendar = Calendar.getInstance();
@@ -83,7 +83,7 @@ public class DateUtil {
     /**
      * 从Date类型的时间中提取日期串
      * 8位
-     * <p>author:赵煜
+     * <p>author:szh
      */
     public static String getDateStr(Date date) {
         Calendar calendar = Calendar.getInstance();
@@ -98,7 +98,7 @@ public class DateUtil {
     /**
      * 从Date类型的时间中提取时间串
      * 6位
-     * <p>author:赵煜
+     * <p>author:szh
      *
      */
     public static String getTimeStr(Date date,int length) {

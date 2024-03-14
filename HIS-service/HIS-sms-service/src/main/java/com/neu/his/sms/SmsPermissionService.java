@@ -38,7 +38,7 @@ public interface SmsPermissionService {
 
     /**
      * 描述:权限树
-     * <p>author: 赵煜
+     * <p>author: szh
      */
     List<SmsPermissionNode> treeList();
 //

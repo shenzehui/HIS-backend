@@ -3,7 +3,7 @@ package com.neu.his.bo;
  * @ClassName: WebLog
  * @description: TODO
  * @author Zain
- * @date 2019/5/319:58
+ * @date 2023/5/319:58
  */
 public class WebLog {
     /**

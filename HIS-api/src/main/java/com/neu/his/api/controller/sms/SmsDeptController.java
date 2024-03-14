@@ -27,7 +27,7 @@ public class SmsDeptController {
 
     /**
      * 描述:新增一个科室
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("新增科室")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
@@ -42,7 +42,7 @@ public class SmsDeptController {
 
     /**
      * 描述:根据ids删除科室
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("根据ids删除科室")
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
@@ -57,7 +57,7 @@ public class SmsDeptController {
 
     /**
      * 描述:更新一个科室的全部信息
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("更新科室信息")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
@@ -72,7 +72,7 @@ public class SmsDeptController {
 
     /**
      * 描述:模糊查询科室、且分页
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("模糊查询科室、且分页")
     @RequestMapping(value = "/select", method = RequestMethod.POST)
@@ -88,7 +88,7 @@ public class SmsDeptController {
 
     /**
      * 描述:查询所有科室信息
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("查询所有科室")
     @RequestMapping(value = "/selectAll", method = RequestMethod.GET)

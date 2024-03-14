@@ -22,7 +22,7 @@ public class DmsMechanicItemRecordController {
 
     /**
      * 描述:根据科室id刷新患者列表
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation(value = "根据科室id刷新患者列表")
     @RequestMapping(value = "/listByDept", method = RequestMethod.POST)
@@ -34,7 +34,7 @@ public class DmsMechanicItemRecordController {
 
     /**
      * 描述:医技登记
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation(value = "登记")
     @RequestMapping(value = "/log", method = RequestMethod.POST)
@@ -49,7 +49,7 @@ public class DmsMechanicItemRecordController {
 
     /**
      * 描述:上传结果
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation(value = "上传结果")
     @RequestMapping(value = "/uploadResult", method = RequestMethod.POST)

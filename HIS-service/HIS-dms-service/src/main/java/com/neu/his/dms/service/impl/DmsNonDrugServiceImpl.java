@@ -33,8 +33,8 @@ public class DmsNonDrugServiceImpl implements DmsNonDrugService {
     /**
      * 描述：新增一个非药品
      * <p>author:王思阳
-     * <p>author:赵煜     封装param中没有的数据
-     * <p>author:赵煜     修复科室名字错误bug
+     * <p>author:szh     封装param中没有的数据
+     * <p>author:szh     修复科室名字错误bug
      */
     @Override
     public int create(DmsNonDrugParam dmsNonDrugParam) {
@@ -96,7 +96,7 @@ public class DmsNonDrugServiceImpl implements DmsNonDrugService {
     /**
      * 描述：模糊查询非药品、且分页
      * <p>author:王思阳
-     * <p>author:赵煜   改为模糊查询,并封装科室名字
+     * <p>author:szh   改为模糊查询,并封装科室名字
      *
      */
     @Override

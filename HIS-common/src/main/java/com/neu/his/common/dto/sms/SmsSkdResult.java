@@ -31,7 +31,7 @@ public class SmsSkdResult  implements Serializable {
     @ApiModelProperty(value = "挂号级别")
     private String registrationRank;
 
-    //20190625 马
+    //20230625 马
     @ApiModelProperty(value = "剩余号数")
     private Long remain;
 }

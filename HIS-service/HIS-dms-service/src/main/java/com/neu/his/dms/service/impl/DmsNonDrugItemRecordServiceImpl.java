@@ -93,7 +93,7 @@ public class DmsNonDrugItemRecordServiceImpl implements DmsNonDrugItemRecordServ
     /**
      * 描述：刷新项目
      * <p>author:王思阳
-     * <p>author:赵煜 解决封装参数不完全的bug
+     * <p>author:szh 解决封装参数不完全的bug
      */
     //1.封装非药品记录
     //自己找这几个属性excuteDeptName/excuteStaffName/createStaffName/logStaffName

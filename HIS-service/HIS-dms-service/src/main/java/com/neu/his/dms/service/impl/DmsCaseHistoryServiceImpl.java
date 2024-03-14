@@ -52,8 +52,8 @@ public class DmsCaseHistoryServiceImpl implements DmsCaseHistoryService {
     /**
      * 描述：初诊
      * <p>author:王思阳
-     * <p>author: 赵煜 修改status为1 初诊结束
-     * <p>author: 赵煜 必须根据提交上来的registerId来封装patientId,在调用病人病历时，才能进行查询得到
+     * <p>author: szh 修改status为1 初诊结束
+     * <p>author: szh 必须根据提交上来的registerId来封装patientId,在调用病人病历时，才能进行查询得到
      */
     @Override
     public int insertPriliminaryDise(DmsCaseHistoryParam dmsCaseHistoryParam) {
@@ -110,7 +110,7 @@ public class DmsCaseHistoryServiceImpl implements DmsCaseHistoryService {
     /**
      * 描述：确诊
      * <p>author:王思阳
-     * <p>author: 赵煜 修改status为2 确诊结束
+     * <p>author: szh 修改status为2 确诊结束
      */
     @Override
     public int submitDefiniteDise(DmsCaseHistoryParam dmsCaseHistoryParam) {
@@ -138,7 +138,7 @@ public class DmsCaseHistoryServiceImpl implements DmsCaseHistoryService {
     /**
      * 描述：诊毕
      * <p>author:王思阳
-     * <p>author: 赵煜 修改status为3 看诊结束（诊毕），则下次就诊可查出病历记录
+     * <p>author: szh 修改status为3 看诊结束（诊毕），则下次就诊可查出病历记录
      */
     @Override
     public int endDiagnosis(DmsCaseHistoryParam dmsCaseHistoryParam) {

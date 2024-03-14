@@ -20,7 +20,7 @@ public class SmsFrequentUsedController {
 
     /**
      * 描述:添加一个常用项
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("新增常用项")
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -37,7 +37,7 @@ public class SmsFrequentUsedController {
 
     /**
      * 描述:删除一个常用项
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("删除常用项")
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
@@ -55,7 +55,7 @@ public class SmsFrequentUsedController {
 
     /**
      * 描述:查询指定常用项
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("查询指定常用项")
     @RequestMapping(value = "/selectByType", method = RequestMethod.POST)

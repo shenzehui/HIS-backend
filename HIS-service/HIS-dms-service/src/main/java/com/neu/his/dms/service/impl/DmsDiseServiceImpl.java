@@ -25,7 +25,7 @@ public class DmsDiseServiceImpl implements DmsDiseService {
     /**
      * 描述：新增一个诊断
      * <p>author:王思阳
-     * <p>author:赵煜 修复新增疾病诊断时,不能增加已删除的且name相同的记录
+     * <p>author:szh 修复新增疾病诊断时,不能增加已删除的且name相同的记录
      */
     @Override
     public int create(DmsDiseParam dmsDiseParam) {

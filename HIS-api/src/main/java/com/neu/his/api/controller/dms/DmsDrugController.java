@@ -29,7 +29,7 @@ public class DmsDrugController {
 
     /**
      * 描述:新增一个药品
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("新增药品")
     @RequestMapping(value = "/createDrug", method = RequestMethod.POST)
@@ -44,7 +44,7 @@ public class DmsDrugController {
 
     /**
      * 描述:根据ids删除药品
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("根据ids删除药品")
     @RequestMapping(value = "/deleteDrug", method = RequestMethod.POST)
@@ -59,7 +59,7 @@ public class DmsDrugController {
 
     /**
      * 描述:更新一个药品的全部信息
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("更新药品信息")
     @RequestMapping(value = "/updateDrug/{id}", method = RequestMethod.POST)
@@ -74,7 +74,7 @@ public class DmsDrugController {
 
     /**
      * 描述:模糊查询药品、且分页
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("模糊查询药品、且分页")
     @RequestMapping(value = "/selectDrug", method = RequestMethod.POST)
@@ -90,7 +90,7 @@ public class DmsDrugController {
 
     /**
      * 描述:查询所有药品
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("查询所有药品")
     @RequestMapping(value = "/selectAllDrug", method = RequestMethod.GET)
@@ -102,7 +102,7 @@ public class DmsDrugController {
 
     /**
      * 描述:查询所有药品剂型
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("查询所有药品剂型")
     @RequestMapping(value = "/selectAllDosage", method = RequestMethod.GET)

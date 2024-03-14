@@ -24,7 +24,7 @@ public class DmsCaseModelController {
 
     /**
      * 增加时需要传入{parentId}
-     * <p>author:赵煜
+     * <p>author:szh
      */
     @ApiOperation(value = "新增病历模板目录或模板")
     @RequestMapping(value = "/create", method = RequestMethod.POST)

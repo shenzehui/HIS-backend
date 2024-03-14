@@ -19,8 +19,6 @@ public class DmsRegistrationController {
     @Autowired
     DmsRegistrationService dmsRegistrationService;
 
-    //挂号
-    //1.调用DmsRegistrationService的createRegistration
     @ApiOperation(value = "挂号")
     @RequestMapping(value = "/createRegistration", method = RequestMethod.POST)
     @ResponseBody

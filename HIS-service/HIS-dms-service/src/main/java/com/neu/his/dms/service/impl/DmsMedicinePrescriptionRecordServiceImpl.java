@@ -83,8 +83,8 @@ public class DmsMedicinePrescriptionRecordServiceImpl implements DmsMedicinePres
 
     /**
      * 描述:1.根据挂号id查询状态不为0的处方
-     * <p>author: ma
-     * <p>20190614 赵煜 modify:DmsMedicineItemRecord->DmsMedicineItemRecordResult
+     * <p>author: szh
+     * <p>20230614 szh modify:DmsMedicineItemRecord->DmsMedicineItemRecordResult
      */
     @Override
     public List<DmsMedicinePrescriptionRecordResult> listByReg(Long registrationId){

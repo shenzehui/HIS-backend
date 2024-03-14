@@ -21,7 +21,7 @@ import java.util.*;
  * @author Zain
  * @ClassName: NonDrugModelServiceImpl
  * @description: TODO
- * @date 2019/6/9 9:40
+ * @date 2023/6/9 9:40
  */
 
 @Service
@@ -35,8 +35,8 @@ public class DmsNonDrugModelServiceImpl implements DmsNonDrugModelService {
 
     /**
      * 描述：创建模版
-     * <p>author:赵煜
-     * <p>author:赵煜  code可以重名
+     * <p>author:szh
+     * <p>author:szh  code可以重名
      */
     @Override
     public int createModel(DmsNonDrugModelParam dmsNonDrugModelParam) {
@@ -95,8 +95,8 @@ public class DmsNonDrugModelServiceImpl implements DmsNonDrugModelService {
     /**
      * 描述：根据modelId更新model信息
      *       删了重新创建
-     * <p>author:赵煜
-     * <p>author:赵煜  修改不能更新的bug  直接更新，不考虑code重复
+     * <p>author:szh
+     * <p>author:szh  修改不能更新的bug  直接更新，不考虑code重复
      */
     @Override
     public int updateModel(Long modelId, DmsNonDrugModelParam dmsNonDrugModelParam) {

@@ -28,7 +28,7 @@ public class DmsMedicinePrescriptionRecordController {
     private RabbitMQOrderSender rabbitMQOrderSender;
     /**
      * 描述:开立处方（发送）
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation(value = "开立处方")
     @RequestMapping(value = "/apply", method = RequestMethod.POST)
@@ -48,7 +48,7 @@ public class DmsMedicinePrescriptionRecordController {
 
     /**
      * 描述:作废处方
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation(value = "作废处方")
     @RequestMapping(value = "/invalid", method = RequestMethod.POST)
@@ -63,7 +63,7 @@ public class DmsMedicinePrescriptionRecordController {
 
     /**
      * 描述:根据registrationId查询处方
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation(value = "根据挂号Id查询处方")
     @RequestMapping(value = "/listByReg", method = RequestMethod.POST)
@@ -75,7 +75,7 @@ public class DmsMedicinePrescriptionRecordController {
 
     /**
      * 描述:根据处方id查询成药处方项
-     * <p>author: 赵煜
+     * <p>author: szh
      */
     @ApiOperation(value = "根据ids查询成药处方")
     @RequestMapping(value = "/listByIds", method = RequestMethod.POST)

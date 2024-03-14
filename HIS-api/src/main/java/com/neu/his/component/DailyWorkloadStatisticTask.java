@@ -23,7 +23,7 @@ public class DailyWorkloadStatisticTask {
 
     /**
      * 描述:每天00:05:00开始执行，统计前一天所有员工、科室工作量并插入数据库
-     * <p>author: ma
+     * <p>author: szh
      */
     @Scheduled(cron = "0 5 0 ? * *")
     private void dailyWorkloadStatistic(){

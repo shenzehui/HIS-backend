@@ -95,8 +95,8 @@ public class SmsSkdServiceImpl implements SmsSkdService {
 
     /**
      * 描述:1.调用SmsSkdRuleDao根据deptId查找数据（不包括规则项）
-     * <p>author: ma
-     * <p>author: 赵煜 修改查询不到科室排班规则500错误，封装操作员姓名
+     * <p>author: szh
+     * <p>author: szh 修改查询不到科室排班规则500错误，封装操作员姓名
      */
     @Override
     public List<SmsSkdRuleResult> selectRuleByDept(Long deptId){
@@ -269,7 +269,7 @@ public class SmsSkdServiceImpl implements SmsSkdService {
         if(smsSkdParam.getStaffId() != null){
             criteria.andStaffIdEqualTo(smsSkdParam.getStaffId());
         }
-        //20190625 ma
+        //20230625 szh
         if(smsSkdParam.getStartDate() != null){
             criteria.andDateGreaterThanOrEqualTo(smsSkdParam.getStartDate());
         }
@@ -301,7 +301,7 @@ public class SmsSkdServiceImpl implements SmsSkdService {
         }
 
 
-        //返回数据包装成Result  201906225 ma
+        //返回数据包装成Result  202306225 szh
         smsSkdExample.setOrderByClause("date desc");
 
         List<SmsSkd> smsSkdList = smsSkdMapper.selectByExample(smsSkdExample);

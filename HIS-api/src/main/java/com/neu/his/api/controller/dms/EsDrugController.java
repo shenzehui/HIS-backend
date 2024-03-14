@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * 搜索药品管理Controller
- * Created by wang on 2019/6/19.
+ * Created by wang on 2023/6/19.
  */
 @Controller
 @Api(tags = "EsDrugController", description = "搜索药品")

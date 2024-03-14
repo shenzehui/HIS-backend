@@ -31,8 +31,8 @@ public class SmsDeptServiceImpl implements SmsDeptService {
      * 描述:1.调用SmsDeptDao根据code查询科室是否存在
      * 2.1.如果不存在则向SmsDeptDao插入则插入数据，并返回1
      * 2.2.如果存在则返回值0
-     * <p>author: ma
-     * <p>author: 赵煜 修改科室新增的问题（不能新增同名科室）
+     * <p>author: szh
+     * <p>author: szh 修改科室新增的问题（不能新增同名科室）
      */
     @Override
     public int create(SmsDeptParam smsDeptParam){

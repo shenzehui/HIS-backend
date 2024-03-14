@@ -28,7 +28,7 @@ public class SmsRegistrationRankController {
 
     /**
      * 描述:新增一个挂号级别
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("新增挂号级别")
     @RequestMapping(value = "/create", method = RequestMethod.POST)
@@ -43,7 +43,7 @@ public class SmsRegistrationRankController {
 
     /**
      * 描述:根据ids删除挂号级别
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("根据ids删除挂号级别")
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
@@ -58,7 +58,7 @@ public class SmsRegistrationRankController {
 
     /**
      * 描述:更新一个挂号级别的全部信息
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("更新挂号级别信息")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
@@ -73,7 +73,7 @@ public class SmsRegistrationRankController {
 
     /**
      * 描述:模糊查询挂号级别、且分页
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("模糊查询挂号级别、且分页")
     @RequestMapping(value = "/select", method = RequestMethod.POST)
@@ -89,7 +89,7 @@ public class SmsRegistrationRankController {
 
     /**
      * 描述:查询所有挂号级别
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("查询所有挂号级别")
     @RequestMapping(value = "/selectAll", method = RequestMethod.GET)

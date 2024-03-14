@@ -38,7 +38,7 @@ public class AppHistoryController {
 
     /**
      * 描述:查询历史挂号信息列表
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("查询历史挂号信息")
     @RequestMapping(value = "/listAllRegistration", method = RequestMethod.POST)
@@ -50,7 +50,7 @@ public class AppHistoryController {
 
     /**
      * 描述:查看某次挂号费用大项
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("查询某次挂号费用（大项）")
     @RequestMapping(value = "/listFee", method = RequestMethod.POST)
@@ -62,7 +62,7 @@ public class AppHistoryController {
 
     /**
      * 描述:查看某次挂号费用小项
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("查询某次挂号费用（小项）")
     @RequestMapping(value = "/listDetail", method = RequestMethod.POST)
@@ -75,7 +75,7 @@ public class AppHistoryController {
 
     /**
      * 描述:查看检查检验结果
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("查询检查检验结果")
     @RequestMapping(value = "/getResult", method = RequestMethod.POST)
@@ -87,7 +87,7 @@ public class AppHistoryController {
 
     /**
      * 描述:查询所有科室描述
-     * <p>author: ma
+     * <p>author: szh
      */
     @ApiOperation("查询所有科室描述")
     @RequestMapping(value = "/getDeptDescription", method = RequestMethod.POST)

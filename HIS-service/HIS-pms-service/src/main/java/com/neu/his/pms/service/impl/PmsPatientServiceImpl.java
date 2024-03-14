@@ -1,6 +1,7 @@
 package com.neu.his.pms.service.impl;
 
 import cn.hutool.core.collection.CollectionUtil;
+import com.neu.his.common.api.CommonResult;
 import com.neu.his.common.dto.dms.DmsCaseHistoryResult;
 
 import com.neu.his.common.dto.pms.PmsDiagnosisPatientListResult;
@@ -71,7 +72,7 @@ public class PmsPatientServiceImpl implements PmsPatientService {
     /**
      * 描述：
      * <p>author:王思阳
-     * <p>author:赵煜  修改mysql5.7中比较时间错误
+     * <p>author:szh  修改mysql5.7中比较时间错误
      * 修改空指针异常
      * 修改通过无别筛选列表错误
      */
@@ -91,11 +92,7 @@ public class PmsPatientServiceImpl implements PmsPatientService {
 
         Date beforeAday = DateUtil.getDateBefore(date, 1);
 
-        dmsRegistrationExample.createCriteria()
-                .andBindStatusEqualTo(1)
-                .andDeptIdEqualTo(deptId)
-                .andStatusEqualTo(1)
-                .andAttendanceDateBetween(beforeAday, date);
+        dmsRegistrationExample.createCriteria().andBindStatusEqualTo(1).andDeptIdEqualTo(deptId).andStatusEqualTo(1).andAttendanceDateBetween(beforeAday, date);
         List<DmsRegistration> dmsRegistrationList = dmsRegistrationMapper.selectByExample(dmsRegistrationExample);
 
         System.err.println("deptWaitList.size: " + dmsRegistrationList.size());
@@ -133,9 +130,7 @@ public class PmsPatientServiceImpl implements PmsPatientService {
         //通过午别、时间、医生id在表sms_skd中查找出sms_skd的id
         SmsSkdExample smsSkdExample = new SmsSkdExample();
         // smsSkdExample.createCriteria().andNoonEqualTo(noon).andStaffIdEqualTo(staffId).andDateEqualTo(DateUtil.getDate(DateUtil.setMilliSecond(date,0)));
-        smsSkdExample.createCriteria()
-                .andStaffIdEqualTo(staffId)
-                .andDateEqualTo(DateUtil.getDate(DateUtil.setMilliSecond(date, 0)));
+        smsSkdExample.createCriteria().andStaffIdEqualTo(staffId).andDateEqualTo(DateUtil.getDate(DateUtil.setMilliSecond(date, 0)));
         /*
         时间判断问题
          */
@@ -158,9 +153,7 @@ public class PmsPatientServiceImpl implements PmsPatientService {
         DmsRegistrationExample dmsRegistrationExample1 = new DmsRegistrationExample();
         //使用DateUtil只截取日期部分
 
-        dmsRegistrationExample1.createCriteria().andBindStatusEqualTo(1)
-                .andAttendanceDateEqualTo(DateUtil.getDate(DateUtil.setMilliSecond(date, 0)))
-                .andSkdIdIn(idList);
+        dmsRegistrationExample1.createCriteria().andBindStatusEqualTo(1).andAttendanceDateEqualTo(DateUtil.getDate(DateUtil.setMilliSecond(date, 0))).andSkdIdIn(idList);
         ;
         /*
         时间判断问题
@@ -290,5 +283,38 @@ public class PmsPatientServiceImpl implements PmsPatientService {
 
         return pmsPatientResult;
 
+    }
+
+    @Override
+    public CommonResult patientRegister(String identificationNo) {
+        PmsPatientExample pmsPatientExample = new PmsPatientExample();
+        pmsPatientExample.createCriteria().andIdentificationNoEqualTo(identificationNo);
+        List<PmsPatient> pmsPatientList = pmsPatientMapper.selectByExample(pmsPatientExample);
+        if (CollectionUtil.isNotEmpty(pmsPatientList)) {
+            return CommonResult.failed("该用户已存在，注册失败");
+        }
+
+        // 生成病历号
+        String medicalRecordNo = generateMedicalRecordNo(identificationNo);
+        PmsPatient patient = new PmsPatient();
+        patient.setIdentificationNo(identificationNo);
+        patient.setMedicalRecordNo(medicalRecordNo);
+        // 注册实现
+        pmsPatientMapper.insertSelective(patient);
+        return CommonResult.success("注册成功");
+    }
+
+    //生成病历号
+    public String generateMedicalRecordNo(String identificationNo) {
+        Date date = new Date();
+        String yyyymmdd = DateUtil.getDateStr(date);//年月日字符串
+        String hhmm = DateUtil.getTimeStr(date, 4);//时分字符串
+        int length = identificationNo.length();
+        String lastFour;
+        if (length > 4) {
+            lastFour = identificationNo.substring(length - 4, length);
+            return yyyymmdd + hhmm + lastFour;
+        }
+        return null;
     }
 }

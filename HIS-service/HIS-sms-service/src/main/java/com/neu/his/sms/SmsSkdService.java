@@ -54,7 +54,7 @@ public interface SmsSkdService {
 
     /**
      * 描述: 根据科室id列出所有的能排班的员工
-     * <p>author: 赵煜
+     * <p>author: szh
      */
     List<SmsSkdRuleItemResult> listCanSkdStaffByDept(Long deptId);
 }

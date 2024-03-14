@@ -63,7 +63,7 @@ public class SmsStaffServiceImpl implements SmsStaffService {
     private String tokenHead;
 
 
-    @Override//不完善--20190601-赵煜注
+    @Override//不完善--20230601-szh注
     public int create(SmsStaffParam smsStaffParam) {
         SmsStaff smsStaff = new SmsStaff();
         BeanUtils.copyProperties(smsStaffParam, smsStaff);
@@ -93,8 +93,6 @@ public class SmsStaffServiceImpl implements SmsStaffService {
         //查询是否有相同用户名的用户
         SmsStaffExample example = new SmsStaffExample();
         example.createCriteria().andUsernameEqualTo(smsStaff.getUsername());//spring MVC必须保证Username不为null
-        List<SmsStaff> lists = smsStaffMapper.selectByExample(example);
-
         List<SmsStaff> staffList = smsStaffMapper.selectByExample(example);
         if (staffList.size() > 0) { //存在,若通过此接口进行创建，则重复数量只可能为1
             return null;
@@ -132,7 +130,7 @@ public class SmsStaffServiceImpl implements SmsStaffService {
         int deleteSkdCount = smsSkdRuleMapper.deleteByExample(skdRuleExample);
 
         //删除排班表中与ids相关行？
-        // TODO: 2019/5/30
+        // TODO: 2023/5/30
 
         //删除成功，在redis修改flag
         redisUtil.setObj("staffChangeStatus", "1");
@@ -319,7 +317,7 @@ public class SmsStaffServiceImpl implements SmsStaffService {
 
     /**
      * 描述：仅返回实体信息
-     * <p>author: 赵煜
+     * <p>author: szh
      * <p>return
      */
     @Override
